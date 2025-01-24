@@ -12,8 +12,7 @@ fn main() {
         .from_reader(content.as_bytes());
 
     for result in rdr.records() {
-        let record = result.unwrap();
-        println!("{:?}", record);
+        println!("Texto: {}", result.unwrap().get(2).unwrap());
     }
 
 }
